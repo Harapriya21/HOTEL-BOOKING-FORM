@@ -6,146 +6,154 @@
   <link rel="icon" href="data:,">
   <title>Hotel Booking Form</title>
 
-  
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
 
-  <nav class="bg-white shadow-sm fixed w-full top-0 left-0 z-50 transition-shadow">
+<body class="bg-gray-100 min-h-screen">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-sm fixed w-full top-0 left-0 z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="flex items-center space-x-6">
-        <div class="text-2xl font-bold text-blue-600">
-          🏨 HotelStay
-        </div>
-      </div>
-      <div class="flex items-center space-x-4">
-        <div class="hidden md:flex space-x-6 font-medium">
-          <a href="Home.html" class="text-gray-700 hover:text-blue-600">Home</a>
-          <a href="Rooms.html" class="text-gray-700 hover:text-blue-600">Rooms</a>
-          <a href="Contact.html" class="text-gray-700 hover:text-blue-600">Contact</a>
-        </div>
+      <div class="text-2xl font-bold text-blue-600">🏨 HotelStay</div>
+      <div class="hidden md:flex space-x-6 font-medium">
+        <a href="Home.html" class="text-gray-700 hover:text-blue-600">Home</a>
+        <a href="Rooms.html" class="text-gray-700 hover:text-blue-600">Rooms</a>
+        <a href="Contact.html" class="text-gray-700 hover:text-blue-600">Contact</a>
       </div>
     </div>
   </nav>
 
-  <div class="bg-white shadow-lg rounded-xl p-6 w-full max-w-2xl">
-    <h2 class="text-2xl font-bold text-blue-600 mb-6 text-center">
-      🏨 Hotel Booking Form
-    </h2>
+  <!-- Form -->
+  <div class="flex justify-center pt-28 px-4">
+    <div class="bg-white shadow-lg rounded-xl p-6 w-full max-w-2xl">
 
-    <form id="bookingForm" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <h2 class="text-2xl font-bold text-blue-600 mb-6 text-center">
+        🏨 Hotel Booking Form
+      </h2>
 
-      
-      <div>
-        <label class="block text-sm font-medium">Full Name</label>
-        <input type="text" id="name"
-          class="w-full border rounded-lg p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-400"
-          placeholder="Enter your name" required>
-      </div>
+      <form id="bookingForm" class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
-      
-      <div>
-        <label class="block text-sm font-medium">Phone Number</label>
-        <input type="tel" id="phone"
-          class="w-full border rounded-lg p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-400"
-          placeholder="10-digit mobile number" required>
-      </div>
+        <!-- Full Name -->
+        <div>
+          <label class="block text-sm font-medium">Full Name</label>
+          <input id="name" type="text" class="w-full border rounded-lg p-2 mt-1">
+          <p class="text-red-500 text-sm hidden" id="nameError">
+            Enter at least 3 characters
+          </p>
+        </div>
 
-     
-      <div class="md:col-span-2">
-        <label class="block text-sm font-medium">Email ID</label>
-        <input type="email" id="email"
-          class="w-full border rounded-lg p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-400"
-          placeholder="example@email.com" required>
-      </div>
+        <!-- Phone -->
+        <div>
+          <label class="block text-sm font-medium">Phone Number</label>
+          <input id="phone" type="tel" class="w-full border rounded-lg p-2 mt-1">
+          <p class="text-red-500 text-sm hidden" id="phoneError">
+            Enter valid 10-digit number
+          </p>
+        </div>
 
-      
-      <div>
-        <label class="block text-sm font-medium">Check-in Date</label>
-        <input type="date" id="checkin"
-          class="w-full border rounded-lg p-2 mt-1" required>
-      </div>
+        <!-- Email -->
+        <div class="md:col-span-2">
+          <label class="block text-sm font-medium">Email</label>
+          <input id="email" type="email" class="w-full border rounded-lg p-2 mt-1">
+          <p class="text-red-500 text-sm hidden" id="emailError">
+            Enter valid email address
+          </p>
+        </div>
 
-      
-      <div>
-        <label class="block text-sm font-medium">Check-out Date</label>
-        <input type="date" id="checkout"
-          class="w-full border rounded-lg p-2 mt-1" required>
-      </div>
+        <!-- Check-in -->
+        <div>
+          <label class="block text-sm font-medium">Check-in Date</label>
+          <input id="checkin" type="date" class="w-full border rounded-lg p-2 mt-1">
+          <p class="text-red-500 text-sm hidden" id="checkinError">
+            Select a valid check-in date
+          </p>
+        </div>
 
-      
-      <div>
-        <label class="block text-sm font-medium">Room Type</label>
-        <select id="room"
-          class="w-full border rounded-lg p-2 mt-1">
-          <option>Standard</option>
-          <option>Deluxe</option>
-          <option>Suite</option>
-        </select>
-      </div>
+        <!-- Check-out -->
+        <div>
+          <label class="block text-sm font-medium">Check-out Date</label>
+          <input id="checkout" type="date" class="w-full border rounded-lg p-2 mt-1">
+          <p class="text-red-500 text-sm hidden" id="checkoutError">
+            Check-out must be after check-in
+          </p>
+        </div>
 
-      
-      <div>
-        <label class="block text-sm font-medium">Number of Guests</label>
-        <input type="number" id="guests" min="1" max="5"
-          class="w-full border rounded-lg p-2 mt-1" value="1">
-      </div>
+        <!-- Guests -->
+        <div>
+          <label class="block text-sm font-medium">Guests</label>
+          <input id="guests" type="number" min="1" max="5"
+            class="w-full border rounded-lg p-2 mt-1" value="1">
+        </div>
 
-      
-      <div class="md:col-span-2">
-        <label class="block text-sm font-medium">Special Requests</label>
-        <textarea
-          class="w-full border rounded-lg p-2 mt-1"
-          placeholder="Any special needs or preferences"></textarea>
-      </div>
+        <!-- Special Requests -->
+        <div class="md:col-span-2">
+          <label class="block text-sm font-medium">Special Requests</label>
+          <textarea id="requests"
+            class="w-full border rounded-lg p-2 mt-1 resize-none"
+            rows="3"
+            placeholder="Any special needs or preferences (optional)">
+          </textarea>
+        </div>
 
-      
-      <p id="errorMsg" class="text-red-500 text-sm md:col-span-2 hidden"></p>
+        <!-- Submit -->
+        <div class="md:col-span-2">
+          <button type="submit"
+            class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
+            Submit Booking
+          </button>
+        </div>
 
-      
-      <div class="md:col-span-2">
-        <button type="submit"
-          class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg">
-          Book Now
-        </button>
-      </div>
-    </form>
+      </form>
+    </div>
   </div>
 
-  
+  <!-- JavaScript -->
   <script>
-    document.getElementById("bookingForm").addEventListener("submit", function (e) {
-      e.preventDefault();
+    const today = new Date().toISOString().split("T")[0];
+    checkin.min = today;
 
-      const name = document.getElementById("name").value.trim();
-      const phone = document.getElementById("phone").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const checkin = document.getElementById("checkin").value;
-      const checkout = document.getElementById("checkout").value;
-      const errorMsg = document.getElementById("errorMsg");
+    checkin.addEventListener("change", () => {
+      checkout.value = "";
+      checkout.min = checkin.value;
+    });
 
-      errorMsg.classList.add("hidden");
+    function toggleError(id, isValid) {
+      document.getElementById(id).classList.toggle("hidden", isValid);
+    }
 
-      
-      if (!/^\d{10}$/.test(phone)) {
-        errorMsg.textContent = "Phone number must be 10 digits.";
-        errorMsg.classList.remove("hidden");
-        return;
-      }
+    function validateForm() {
+      let valid = true;
 
-      
-      if (checkout <= checkin) {
-        errorMsg.textContent = "Check-out date must be after check-in date.";
-        errorMsg.classList.remove("hidden");
-        return;
-      }
+      toggleError("nameError", name.value.trim().length >= 3);
+      if (name.value.trim().length < 3) valid = false;
 
-      alert(
-        `Booking Successful!\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}`
+      toggleError("phoneError", /^[0-9]{10}$/.test(phone.value));
+      if (!/^[0-9]{10}$/.test(phone.value)) valid = false;
+
+      toggleError("emailError", /^[^ ]+@[^ ]+\.[a-z]{2,}$/i.test(email.value));
+      if (!/^[^ ]+@[^ ]+\.[a-z]{2,}$/i.test(email.value)) valid = false;
+
+      toggleError("checkinError", checkin.value !== "");
+      if (!checkin.value) valid = false;
+
+      toggleError(
+        "checkoutError",
+        checkout.value && new Date(checkout.value) > new Date(checkin.value)
       );
+      if (!checkout.value || new Date(checkout.value) <= new Date(checkin.value))
+        valid = false;
 
-      this.reset();
+      return valid;
+    }
+
+    bookingForm.addEventListener("submit", e => {
+      if (!validateForm()) {
+        e.preventDefault();
+      } else {
+        alert("Booking submitted successfully 🎉");
+      }
     });
   </script>
 
 </body>
+</html>

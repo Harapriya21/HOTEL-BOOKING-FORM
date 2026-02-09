@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>View Rooms</title>
+
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+  
+  <nav class="bg-blue-600 p-4 text-white flex justify-between items-center">
+    <h1 class="text-xl font-bold">🏨 HotelStay</h1>
+    <ul class="flex gap-6">
+      <li><a href="Home.html" class="hover:underline">Home</a></li>
+      <li><a href="Rooms.html" class="hover:underline">Rooms</a></li>
+      <li><a href="Contact.html" class="hover:underline">Contact</a></li>
+    </ul>
+  </nav>
+
+  
+  <section class="text-center py-8">
+    <h2 class="text-3xl font-bold">Available Rooms</h2>
+    <p class="text-gray-600 mt-2">Choose the best room for your stay</p>
+  </section>
+
+  
+  <section class="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    
+    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+      <img src="https://thumbs.dreamstime.com/b/hotel-room-beautiful-orange-sofa-included-43642330.jpg" alt="Deluxe Room" class="w-full">
+      <div class="p-4">
+        <h3 class="text-xl font-semibold">Luxury Room</h3>
+        <p class="text-gray-600 text-sm mt-2">
+          Our Standard Room offers a comfortable and cozy stay with modern amenities. It features a well-furnished bed, air conditioning, free Wi-Fi, a TV, and a private bathroom—ideal for solo travelers or couples.
+        </p>
+        <p class="text-blue-600 font-bold mt-3">₹5,500 / night</p>
+        <a href="Bookings.html">
+        <button onclick="bookRoom('Luxury Room')" 
+          class="mt-4 w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">
+          Book Now
+        </button>
+        </a>
+      </div>
+    </div>
+
+   
+    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+      <img src="https://img.freepik.com/free-photo/small-hotel-room-interior-with-double-bed-bathroom_1262-12489.jpg" alt="Luxury Room" class="w-full">
+      <div class="p-4">
+        <h3 class="text-xl font-semibold">Deluxe Room</h3>
+        <p class="text-gray-600 text-sm mt-2">
+          The Deluxe Room provides extra space and elegance for a relaxing stay. Enjoy stylish interiors, a plush bed, a work desk, high-speed Wi-Fi, a flat-screen TV, and an attached bathroom with premium toiletries.
+        </p>
+        <p class="text-blue-600 font-bold mt-3">₹5,000 / night</p>
+         <a href="Bookings.html">
+        <button onclick="bookRoom('Deluxe Room')" 
+          class="mt-4 w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">
+          Book Now
+        </button>
+        </a>
+      </div>
+    </div>
+    
+
+    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+      <img src="https://img.freepik.com/free-photo/interior-modern-comfortable-hotel-room_1232-1822.jpg?semt=ais_hybrid&w=740&q=80" alt="Deluxe Room" class="w-full">
+      <div class="p-4">
+        <h3 class="text-xl font-semibold">Executive Room</h3>
+        <p class="text-gray-600 text-sm mt-2">
+          Designed for business and leisure travelers, the Executive Room combines comfort and functionality. It includes a spacious layout, luxury bedding, a seating area, minibar, free Wi-Fi, and a modern bathroom.
+        </p>
+        <p class="text-blue-600 font-bold mt-3">₹4,500 / night</p>
+         <a href="Bookings.html">
+        <button onclick="bookRoom('Executive Room')" 
+          class="mt-4 w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">
+          Book Now
+        </button>
+        </a>
+      </div>
+    </div>
+
+    
+    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+      <img src="https://images.unsplash.com/photo-1631049552057-403cdb8f0658?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aG90ZWwlMjByb29tfGVufDB8fDB8fHww" alt="Luxury Room" class="w-full">
+      <div class="p-4">
+        <h3 class="text-xl font-semibold">Family Room</h3>
+        <p class="text-gray-600 text-sm mt-2">
+          Perfect for families, this room offers ample space and comfort. It includes multiple beds, air conditioning, free Wi-Fi, TV, and a clean private bathroom to ensure a pleasant stay for everyone.
+        </p>
+        <p class="text-blue-600 font-bold mt-3">₹4,000 / night</p>
+         <a href="Bookings.html">
+        <button onclick="bookRoom('Family Room')" 
+          class="mt-4 w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">
+          Book Now
+        </button>
+        </a>
+      </div>
+    </div>
+
+    
+    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+      <img src="https://thumbs.dreamstime.com/b/hotel-rooms-8146308.jpg" alt="Standard Room" class="w-full">
+      <div class="p-4">
+        <h3 class="text-xl font-semibold">Suite Room</h3>
+        <p class="text-gray-600 text-sm mt-2">
+          The Suite Room delivers a premium experience with a separate living area and bedroom. Enjoy luxury furnishings, scenic views, high-end amenities, and exceptional comfort for a memorable stay.
+        </p>
+        <p class="text-blue-600 font-bold mt-3">₹3,500 / night</p>
+         <a href="Bookings.html">
+        <a href="Bookings.html">
+         <button onclick="bookRoom('Suite Room')" 
+          class="mt-4 w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">
+          Book Now
+          </button>
+        </a>
+      </div>
+    </div>
+
+    
+    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+      <img src="https://img.freepik.com/free-photo/3d-rendering-beautiful-comtemporary-luxury-bedroom-suite-hotel-with-tv_105762-2058.jpg" alt="Deluxe Room" class="w-full">
+      <div class="p-4">
+        <h3 class="text-xl font-semibold">Deluxe Room</h3>
+        <p class="text-gray-600 text-sm mt-2">
+          The Deluxe Room provides extra space and elegance for a relaxing stay. Enjoy stylish interiors, a plush bed, a work desk, high-speed Wi-Fi, a flat-screen TV, and an attached bathroom with premium toiletries.
+        </p>
+        <p class="text-blue-600 font-bold mt-3">₹3,500 / night</p>
+         <a href="Bookings.html">
+        <button onclick="bookRoom('Deluxe Room')" 
+          class="mt-4 w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">
+          Book Now
+        </button>
+        </a>
+      </div>
+    </div>
+
+    
+    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+      <img src="https://media.istockphoto.com/id/627892060/photo/hotel-room-suite-with-view.jpg?s=612x612&w=0&k=20&c=YBwxnGH3MkOLLpBKCvWAD8F__T-ypznRUJ_N13Zb1cU=" alt="Luxury Room" class="w-full">
+      <div class="p-4">
+        <h3 class="text-xl font-semibold">Luxury Room</h3>
+        <p class="text-gray-600 text-sm mt-2">
+          Our Standard Room offers a comfortable and cozy stay with modern amenities. It features a well-furnished bed, air conditioning, free Wi-Fi, a TV, and a private bathroom—ideal for solo travelers or couples.
+        </p>
+        <p class="text-blue-600 font-bold mt-3">₹5,500 / night</p>
+         <a href="Bookings.html">
+        <button onclick="bookRoom('Luxury Room')" 
+          class="mt-4 w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">
+          Book Now
+        </button>
+        </a>
+      </div>
+    </div>
+
+    
+    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+      <img src="https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?cs=srgb&dl=pexels-pixabay-271618.jpg&fm=jpg" alt="Deluxe Room" class="w-full">
+      <div class="p-4">
+        <h3 class="text-xl font-semibold">Deluxe Room</h3>
+        <p class="text-gray-600 text-sm mt-2">
+          The Deluxe Room provides extra space and elegance for a relaxing stay. Enjoy stylish interiors, a plush bed, a work desk, high-speed Wi-Fi, a flat-screen TV, and an attached bathroom with premium toiletries.
+        </p>
+        <p class="text-blue-600 font-bold mt-3">₹3,500 / night</p>
+         <a href="Bookings.html">
+        <button onclick="bookRoom('Deluxe Room')" 
+          class="mt-4 w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">
+          Book Now
+        </button>
+        </a>
+      </div>
+    </div>
+
+    
+    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+      <img src="https://media.istockphoto.com/id/173587041/photo/hotel-bedroom.jpg?s=612x612&w=0&k=20&c=mzbT-i0sbivf2hK4aAJi0mdYVTUca8o5vij0bJq97Ks=" alt="Luxury Room" class="w-full">
+      <div class="p-4">
+        <h3 class="text-xl font-semibold">Luxury Room</h3>
+        <p class="text-gray-600 text-sm mt-2">
+          Our Standard Room offers a comfortable and cozy stay with modern amenities. It features a well-furnished bed, air conditioning, free Wi-Fi, a TV, and a private bathroom—ideal for solo travelers or couples.
+        </p>
+        <p class="text-blue-600 font-bold mt-3">₹5,500 / night</p>
+         <a href="Bookings.html">
+        <button onclick="bookRoom('Luxury Room')" 
+          class="mt-4 w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">
+          Book Now
+        </button>
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  
+  <footer class="bg-gray-800 text-white text-center py-4 mt-10">
+    © 2026 Hotel Paradise. All rights reserved.
+  </footer>
+
+  
+  <script>
+    function bookRoom(roomType) {
+      alert("You selected: " + roomType);
+    }
+  </script>
+
+</body>
+</html>
